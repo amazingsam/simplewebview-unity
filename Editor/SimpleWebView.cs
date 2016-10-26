@@ -17,7 +17,7 @@ public class SimpleWebView : ScriptableObject
   static void Example()
   {
       // We need the WebViewEditorWindowTabs and the DLL for this to work
-      var t = Types.GetType ("UnityEditor.Web.WebViewEditorWindowTabs", "UnityEditor.dll");
+      var t = Types.GetType ("UnityEditor.Web.WebViewEditorWindow", "UnityEditor.dll");
       var swv = t.GetMethod("Create", bf);
       // Late bound operations cannot be performed on certain types or methods so it needs to generic
       swv = swv.MakeGenericMethod(t);
